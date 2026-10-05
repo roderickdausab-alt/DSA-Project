@@ -188,15 +188,6 @@ git push
 
 For changes made on a separate branch, push the branch and create a pull request for review and merging.
 
-## Individual Contributions
-
-Each group member is expected to understand the project and maintain evidence of their actual contribution through the source code, commits, testing, and project history.
-
-**Nelson Osakwe — 223119024**
-
-Contribution: Postfix expression evaluation using a stack, including stack operations, arithmetic operator processing, input validation, and division-by-zero handling in `PostfixEvaluation.java`.
-
-The contributions of the other group members should be documented according to the work they actually completed.
 
 ## Conclusion
 
