@@ -1,191 +1,205 @@
-DSA Project
+# DSA Project
 
-Overview
+## Project Information
 
-This repository contains a Java-based Data Structures and Algorithms (DSA) group project.
+**Project Title:** Data Structures and Algorithms Project
+**Programming Language:** Java
+**Project Type:** Group Project
+**Repository:** [DSA-Project](https://github.com/roderickdausab-alt/DSA-Project)
 
-The project demonstrates the implementation and practical use of data structures and algorithms through multiple Java classes.
+## Submitted By
 
-Current Project Files
+**Roderick Dausab** — 224031279
 
+## Group Members
+
+| No. | Name            | Student Number |
+| --: | --------------- | -------------- |
+|   1 | Roderick Dausab | 224031279      |
+|   2 | Nelson Osakwe   | 223119024      |
+|   3 | Tjameya P.K     | 225071940      |
+
+## Project Description
+
+The Data Structures and Algorithms (DSA) Project is a Java application developed to demonstrate the practical implementation of programming methods, algorithms, and data structures.
+
+The project contains modules for supporting methods, sorting algorithms, and postfix expression evaluation using a stack. These components demonstrate how algorithms process data and how data structures can be used to solve computational problems.
+
+The application is organized into separate Java source files to make the code easier to understand, test, maintain, and extend.
+
+## System Features
+
+### 1. Main Application
+
+`Main.java` contains the main entry point and application interface.
+
+### 2. Supporting Methods
+
+`methods.java` contains supporting methods used by the project.
+
+### 3. Sorting Algorithms
+
+`Sorting.java` contains the project's sorting functionality for demonstrating how algorithms arrange data.
+
+### 4. Postfix Expression Evaluation
+
+`PostfixEvaluation.java` evaluates mathematical expressions written in postfix notation, also known as Reverse Polish Notation.
+
+The module includes:
+
+* **Push:** Adds an operand or calculated result to the stack.
+* **Pop:** Removes and returns the top stack element.
+* **Peek:** Reads the top element without removing it.
+* **Stack display:** Shows the current contents of the stack during evaluation.
+* **Arithmetic operations:** Supports addition, subtraction, multiplication, and division.
+* **Input validation:** Detects invalid expressions and unsupported operators.
+* **Division-by-zero protection:** Prevents division when the second operand is zero.
+
+#### Example
+
+Postfix expression:
+
+```text
+5 6 + 2 *
+```
+
+Evaluation:
+
+```text
+5 + 6 = 11
+11 * 2 = 22
+```
+
+Final result:
+
+```text
+22
+```
+
+The postfix evaluator uses integer arithmetic, so division discards any fractional part.
+
+## Technologies Used
+
+* Java
+* Java Development Kit (JDK)
+* Visual Studio Code
+* Git
+* GitHub
+
+## Project Structure
+
+```text
 DSA-Project/
+├── README.md
 └── DSA-Project/
     ├── Main.java
     ├── methods.java
     ├── Sorting.java
     └── PostfixEvaluation.java
+```
 
-Features
+## Requirements
 
-Main Application
+Before compiling the project, ensure that the Java Development Kit (JDK) is installed.
 
-Main.java serves as the main entry point for the project and coordinates the application's functionality.
+Check the installation using:
 
-Supporting Methods
-
-methods.java contains supporting methods used by the project.
-
-Sorting
-
-Sorting.java contains the sorting-related functionality implemented for the DSA project.
-
-Postfix Evaluation
-
-PostfixEvaluation.java evaluates postfix (Reverse Polish Notation) expressions using a stack.
-
-The postfix module demonstrates the following stack operations:
-
-push() – adds a value to the stack.
-
-pop() – removes and returns the top value.
-
-peek() – reads the top value without removing it.
-
-displayStack() – displays the current stack.
-
-evaluatePostfix() – evaluates the complete postfix expression.
-
-Supported operators include:
-
-+
--
-*
-/
-×
-÷
-
-The implementation also checks for invalid expressions and division by zero.
-
-Example: Postfix Evaluation
-
-Input:
-
-5 6 + 2 *
-
-Processing:
-
-5 6 + = 11
-11 2 * = 22
-
-Final result:
-
-22
-
-Requirements
-
-To compile and run the project, install a Java Development Kit (JDK) and ensure that java and javac are available from the terminal.
-
-Check the installation with:
-
+```powershell
 java --version
 javac --version
+```
 
-Running the Project in Visual Studio Code
+Both commands should display the installed Java version.
 
-Open the terminal in the directory containing the Java files:
+## Compilation Instructions
 
-cd "C:\Users\osakw\Documents\School\DSA-Project\DSA-Project"
+Open a terminal at the repository's root directory and navigate to the folder containing the Java source files:
 
-Compile all Java source files:
+```powershell
+cd DSA-Project
+```
 
+Compile the Java files:
+
+```powershell
 javac *.java
+```
 
-Run the main project:
+If compilation succeeds, the compiler creates `.class` files for the Java classes.
 
+## How to Run the Application
+
+Run the main application:
+
+```powershell
 java Main
+```
 
-Running the Postfix Evaluator Separately
+To run the postfix evaluator independently, when its standalone `main()` method is present, use:
 
-If PostfixEvaluation.java is being used as a standalone class with its own main() method:
-
+```powershell
 java PostfixEvaluation
+```
 
-Then enter a postfix expression such as:
+Enter a postfix expression using spaces between numbers and operators.
 
+For example:
+
+```text
 8 2 / 3 +
+```
 
-Git and GitHub Workflow
+The result should be:
 
-This project is maintained using Git and GitHub.
+```text
+Final Result: 7
+```
 
-Check the current status:
+## Testing
 
+The application should be tested using valid and invalid inputs.
+
+Suggested postfix evaluator tests include:
+
+| Expression  |        Expected Result |
+| ----------- | ---------------------: |
+| `5 6 +`     |                     11 |
+| `9 4 -`     |                      5 |
+| `3 4 *`     |                     12 |
+| `8 2 /`     |                      4 |
+| `5 6 + 2 *` |                     22 |
+| `8 0 /`     | Division-by-zero error |
+| `5 +`       |     Invalid expression |
+
+## GitHub Collaboration
+
+Git and GitHub are used to maintain the project's source code and development history.
+
+Group members should contribute their own code, test their changes, and use meaningful commit messages to document their work.
+
+Example Git commands:
+
+```powershell
 git status
-
-Create a feature branch for your work:
-
-git checkout -b your-name-feature
-
-Stage your changes:
-
 git add .
+git commit -m "Add postfix expression evaluation using stack"
+git push
+```
 
-Commit your changes:
+For changes made on a separate branch, push the branch and create a pull request for review and merging.
 
-git commit -m "Add postfix expression evaluation"
+## Individual Contributions
 
-Push your branch:
+Each group member is expected to understand the project and maintain evidence of their actual contribution through the source code, commits, testing, and project history.
 
-git push -u origin your-name-feature
+**Nelson Osakwe — 223119024**
 
-For shared group work, submit a pull request from the feature branch to the project's main branch when required by the group workflow.
+Contribution: Postfix expression evaluation using a stack, including stack operations, arithmetic operator processing, input validation, and division-by-zero handling in `PostfixEvaluation.java`.
 
-Git Identity
+The contributions of the other group members should be documented according to the work they actually completed.
 
-Each group member should use their own GitHub-associated Git identity.
+## Conclusion
 
-Check the configured identity with:
+The DSA Project demonstrates the application of data structures and algorithms through a modular Java program. Its sorting functionality, supporting methods, and postfix expression evaluator provide practical examples of algorithmic problem-solving and stack operations.
 
-git config user.name
-git config user.email
-
-The commit email should be associated with the contributor's GitHub account so GitHub can attribute the commit correctly.
-
-Submitted By
-
-Roderick Dausab — Student No. 224031279
-
-Group Members
-
-Member
-
-Student Number
-
-Roderick Dausab
-
-224031279
-
-Nelson Osakwe
-
-223119024
-
-Tjameya P.K
-
-225071940
-
-Individual Contribution Record
-
-Contributions should reflect the work actually completed by each member.
-
-Nelson Osakwe
-
-Contribution: Postfix expression evaluation using the Stack data structure
-
-File: PostfixEvaluation.java
-
-Other Group Members
-
-Roderick Dausab: Add the actual contribution and files completed.
-
-Tjameya P.K: Add the actual contribution and files completed.
-
-Development Notes
-
-New DSA functionality should be added to the existing project structure and integrated with the project's main application where appropriate.
-
-The postfix evaluation implementation is intended to demonstrate practical use of the Stack data structure and related operations.
-
-
-Academic Use
-
-This repository is for academic and educational purposes as part of a group DSA project.
+The project can be extended with additional algorithms, improved validation, and further integration between its modules as development continues.
